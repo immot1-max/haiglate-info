@@ -10,14 +10,14 @@
     },
     {
       "id": "ranniku",
-      "name": "Ranniku n�idishaigla",
-      "location": "Ranniku n�idislinn",
+      "name": "Ranniku näidishaigla",
+      "location": "Ranniku näidislinn",
       "website": null
     },
     {
       "id": "oru",
-      "name": "Oru n�idishaigla",
-      "location": "Oru n�idislinn",
+      "name": "Oru näidishaigla",
+      "location": "Oru näidislinn",
       "website": null
     }
   ],
@@ -34,17 +34,17 @@
     },
     {
       "id": "ultraheli",
-      "name": "Kohuoone ultraheli",
+      "name": "Kõhuõõne ultraheli",
       "group": "Diagnostika",
       "aliases": [
         "UH",
-        "kohu ultraheli",
+        "kõhu ultraheli",
         "sonograafia"
       ]
     },
     {
       "id": "taastusravi",
-      "name": "Taastusarsti vastuvott",
+      "name": "Taastusarsti vastuvõtt",
       "group": "Taastusravi",
       "aliases": [
         "taastusravi",
@@ -53,20 +53,20 @@
     },
     {
       "id": "rontgen",
-      "name": "R�ntgenuuring",
+      "name": "Röntgenuuring",
       "group": "Diagnostika",
       "aliases": [
         "RTG",
-        "r�ntgen"
+        "röntgen"
       ]
     },
     {
       "id": "fusioteraapia",
-      "name": "F�sioteraapia",
+      "name": "Füsioteraapia",
       "group": "Taastusravi",
       "aliases": [
-        "f�sioterapeut",
-        "f�sioteraapia"
+        "füsioterapeut",
+        "füsioteraapia"
       ]
     },
     {
@@ -254,8 +254,8 @@
       "referral": "Saatekiri",
       "location": "Endoskoopiakabinet",
       "conditions": "Plaaniline ambulatoorne uuring.",
-      "booking": "Aeg lepitakse kokku n�idishaigla registratuuris p�rast saatekirja koostamist.",
-      "source": "NOPE arendusn�ide",
+      "booking": "Aeg lepitakse kokku näidishaigla registratuuris pärast saatekirja koostamist.",
+      "source": "NOPE arendusnäide",
       "sourceUrl": null,
       "checked": "2026-11-27",
       "status": "demo"
@@ -267,9 +267,9 @@
       "variant": "Anesteesias",
       "referral": "E-konsultatsioon",
       "location": "Endoskoopiakabinet",
-      "conditions": "Suunamisel t�psusta, et soovitud uuring toimub anesteesias.",
-      "booking": "N�idishaigla endoskoopiameeskond annab p�rast e-konsultatsiooni vastust edasise juhise.",
-      "source": "NOPE arendusn�ide",
+      "conditions": "Suunamisel täpsusta, et soovitud uuring toimub anesteesias.",
+      "booking": "Näidishaigla endoskoopiameeskond annab pärast e-konsultatsiooni vastust edasise juhise.",
+      "source": "NOPE arendusnäide",
       "sourceUrl": null,
       "checked": "2026-11-27",
       "status": "demo"
@@ -280,10 +280,10 @@
       "serviceId": "gastroskoopia",
       "variant": "Anesteesiata",
       "referral": "Saatekiri",
-      "location": "P�evaravikeskus",
+      "location": "Päevaravikeskus",
       "conditions": "Plaaniline ambulatoorne uuring.",
-      "booking": "Uuringuaeg broneeritakse n�idishaigla p�evaravikeskuse kaudu.",
-      "source": "NOPE arendusn�ide",
+      "booking": "Uuringuaeg broneeritakse näidishaigla päevaravikeskuse kaudu.",
+      "source": "NOPE arendusnäide",
       "sourceUrl": null,
       "checked": "2026-11-27",
       "status": "demo"
@@ -292,12 +292,12 @@
       "id": "ran-uh-1",
       "hospitalId": "ranniku",
       "serviceId": "ultraheli",
-      "variant": "T�iskasvanu uuring",
+      "variant": "Täiskasvanu uuring",
       "referral": "Saatekiri",
       "location": "Radioloogiaosakond",
-      "conditions": "M�rgi saatekirjale soovitud uuring.",
-      "booking": "N�idishaigla registratuur lepib kokku uuringuaja.",
-      "source": "NOPE arendusn�ide",
+      "conditions": "Märgi saatekirjale soovitud uuring.",
+      "booking": "Näidishaigla registratuur lepib kokku uuringuaja.",
+      "source": "NOPE arendusnäide",
       "sourceUrl": null,
       "checked": "2026-11-27",
       "status": "demo"
@@ -306,12 +306,12 @@
       "id": "oru-uh-1",
       "hospitalId": "oru",
       "serviceId": "ultraheli",
-      "variant": "T�iskasvanu uuring",
+      "variant": "Täiskasvanu uuring",
       "referral": "Saatekiri",
       "location": "Uuringukeskus",
-      "conditions": "M�rgi saatekirjale uuritav piirkond.",
-      "booking": "Broneerimine toimub n�idishaigla uuringukeskuse kaudu.",
-      "source": "NOPE arendusn�ide",
+      "conditions": "Märgi saatekirjale uuritav piirkond.",
+      "booking": "Broneerimine toimub näidishaigla uuringukeskuse kaudu.",
+      "source": "NOPE arendusnäide",
       "sourceUrl": null,
       "checked": "2026-11-27",
       "status": "demo"
@@ -320,12 +320,12 @@
       "id": "oru-taas-1",
       "hospitalId": "oru",
       "serviceId": "taastusravi",
-      "variant": "Esmane vastuvott",
+      "variant": "Esmane vastuvõtt",
       "referral": "E-konsultatsioon",
       "location": "Taastusravikeskus",
-      "conditions": "Sonasta konsultatsioonik�simus.",
-      "booking": "N�idishaigla annab vastuses edasise suunamisjuhise.",
-      "source": "NOPE arendusn�ide",
+      "conditions": "Sõnasta konsultatsiooniküsimus.",
+      "booking": "Näidishaigla annab vastuses edasise suunamisjuhise.",
+      "source": "NOPE arendusnäide",
       "sourceUrl": null,
       "checked": "2026-11-27",
       "status": "demo"
@@ -337,9 +337,9 @@
       "variant": "Plaaniline uuring",
       "referral": "Saatekiri",
       "location": "Radioloogiaosakond",
-      "conditions": "M�rgi saatekirjale uuritav piirkond.",
-      "booking": "Infos�steemi t��voo n�ites p��rdutakse saatekirjaga radioloogia registratuuri.",
-      "source": "NOPE arendusn�ide",
+      "conditions": "Märgi saatekirjale uuritav piirkond.",
+      "booking": "Infosüsteemi töövoo näites pöördutakse saatekirjaga radioloogia registratuuri.",
+      "source": "NOPE arendusnäide",
       "sourceUrl": null,
       "checked": "2026-11-27",
       "status": "demo"
@@ -348,12 +348,12 @@
       "id": "oru-fus-1",
       "hospitalId": "oru",
       "serviceId": "fusioteraapia",
-      "variant": "Ambulatoorne vastuvott",
+      "variant": "Ambulatoorne vastuvõtt",
       "referral": "Saatekiri",
       "location": "Taastusravikeskus",
-      "conditions": "Individuaalse vastuvotu n�ide.",
-      "booking": "P��rdumine registreeritakse n�idishaigla taastusravikeskuses.",
-      "source": "NOPE arendusn�ide",
+      "conditions": "Individuaalse vastuvõtu näide.",
+      "booking": "Pöördumine registreeritakse näidishaigla taastusravikeskuses.",
+      "source": "NOPE arendusnäide",
       "sourceUrl": null,
       "checked": "2026-11-27",
       "status": "demo"
