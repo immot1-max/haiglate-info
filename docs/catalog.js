@@ -48,7 +48,7 @@ export function catalogRows(data) {
 }
 export function filterRows(rows, {query="",hospital="",group=""}={}) {
   const words=normalize(query).split(/\s+/).filter(Boolean);
-  return rows.filter(row=>(!hospital || row.hospital.id === hospital) && (!group || row.service.group === group) && words.every(word=>row.search.includes(word)));
+  return rows.filter(row=>(!hospital || row.hospital.id === hospital) && (!group || row.service.group === group) && words.every(word=>word.length<=2 ? row.search.split(/\s+/).some(token=>token.startsWith(word)) : row.search.includes(word)));
 }
 export function feedbackLink(row,email) {
   const subject="NOPE teenuseinfo muudatus · " + row.route.id + " · " + row.service.name;

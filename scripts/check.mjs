@@ -23,6 +23,7 @@ if(data.routes.length) {
 if( data.services.some(s=>s.id==="ultraheli" && s.aliases.includes("UH"))) {
   assert.ok(filterRows(rows,{query:"UH"}).some(r=>r.service.id==="ultraheli"));
 }
+assert.ok(!filterRows(rows,{query:"UH"}).some(r=>r.service.id==="psuhholoog"));
 assert.equal(filterRows(rows,{query:"zzzz-qzk-000"}).length,0);
 console.log("Andmestik ja otsing korras. Haiglaid: "+data.hospitals.length+", suunamisteid: "+rows.length+".");
 
