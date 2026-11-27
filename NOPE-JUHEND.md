@@ -10,6 +10,8 @@ Sünonüümid, näiteks UH, käivad teenuse väljale `aliases`. Iga suunamistee 
 
 Paranduse link avab e-kirja mustandi teenuse ID ja nimetusega. Määra kinnitatud toimetaja aadress väljale `feedbackEmail`. Tühi väärtus jätab saaja kasutaja valida.
 
+Haigla ülevaates arvutatakse teenuste, suunamisvariantide ja teenusegruppide arv andmestikust. Haigla kirjele saab lisada väljad `region`, `county` ja `address`. Põhikontaktide jaoks kasuta Põlva kirjet näidisena. Igal kontaktil on nimetus ja rahvusvahelisel kujul telefoninumber. Soovi korral lisa e-post ja lahtiolekuaeg. Kontaktidega koos täida ametlikud allikad (`contactSources`) ja kontrollimise kuupäev (`contactsChecked`). Haigla otseviide kasutab parameetrit `?haigla=ID`.
+
 ## Proovi kohapeal
 
 Käivita projekti juurkaustas `node scripts/check.mjs` (Node 20 või uuem). Kontroll hõlmab ka uue haigla lisamist andmete kaudu. Seejärel käivita `python -m http.server 8080 --directory docs` või `dist`-kausta puhul `python -m http.server 8080 --directory dist`. Ava brauseris `http://localhost:8080`. Päringuga laaditav JSON vajab HTTP-serverit.

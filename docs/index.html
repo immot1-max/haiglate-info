@@ -3,33 +3,37 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="NOPE haiglate teenuste ja suunamisvõimaluste otsing perearstidele.">
+  <meta name="theme-color" content="#142e3c">
+  <meta name="description" content="Haiglate teenused, põhikontaktid ja patsiendi suunamisjuhised perearstile.">
   <title>Haiglate teenuseotsing · NOPE</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css?v=haiglavaade1">
 </head>
 <body>
-  <a class="skip" href="#otsing">Liigu otsingusse</a>
+  <a class="skip" href="#otsing">Liigu teenuseotsingusse</a>
   <header class="mast"><div class="wrap mast-inner">
-    <a class="brand" href="./" aria-label="NOPE teenuseotsingu avaleht"><span class="brand-mark" aria-hidden="true"><i></i></span><b>NOPE</b></a>
+    <a class="brand" href="./" aria-label="NOPE teenuseotsingu avaleht"><span class="brand-mark" aria-hidden="true"></span><b>NOPE</b></a>
     <span class="brand-name">Eesti Noored Perearstid</span>
     <button class="nav-info" id="about" type="button"><span class="info-symbol" aria-hidden="true">i</span> Andmetest</button>
   </div></header>
-  <main>
-    <section class="hero"><div class="wrap hero-inner">
-      <div class="hero-copy"><p class="eyebrow">Perearstile</p><h1>Haiglate teenuseotsing</h1><p class="lead">Leia teenus ja vaata, kuidas patsient sobivasse haiglasse suunata.</p></div>
-      <div class="folder-art" aria-hidden="true"><span class="art-orbit"></span><span class="sheet sheet-back"></span><span class="sheet sheet-mid"></span><span class="sheet sheet-front"><i class="small-cross"></i><i class="paper-line"></i><i class="paper-line short"></i></span></div>
-    </div></section>
-    <div class="wrap directory">
-      <form id="filters" role="search" aria-label="Teenuste otsing" autocomplete="off">
-        <div class="field search-field"><label for="otsing">Otsi teenust või haiglat</label><div class="control"><span class="glass" aria-hidden="true"></span><input type="search" id="otsing" placeholder="Nt gastroskoopia, UH või haigla nimi"></div></div>
-        <div class="field"><label for="hospital">Haigla</label><div class="select-wrap"><select id="hospital"><option value="">Kõik haiglad</option></select></div></div>
-        <div class="field"><label for="group">Teenusegrupp</label><div class="select-wrap"><select id="group"><option value="">Kõik teenusegrupid</option></select></div></div>
-        <label class="example-switch" id="examples-label" hidden><input type="checkbox" id="examples"> Näita ka väljamõeldud näidiskirjeid</label>
-      </form>
+  <main class="wrap directory">
+    <h1>Haiglate teenuseotsing</h1>
+    <form id="filters" role="search" aria-label="Teenuste otsing" autocomplete="off">
+      <div class="field"><label for="region">Piirkond</label><div class="select-wrap"><select id="region"><option value="">Kõik piirkonnad</option></select></div></div>
+      <div class="field"><label for="hospital">Haigla</label><div class="select-wrap"><select id="hospital"><option value="">Kõik haiglad</option></select></div></div>
+      <div class="field search-field"><label for="otsing">Teenuse või haigla otsing</label><div class="control"><span class="glass" aria-hidden="true"></span><input type="search" id="otsing" placeholder="Nt gastroskoopia, UH või haigla nimi"></div></div>
+      <div class="filter-options"><label class="example-switch" id="examples-label" hidden><input type="checkbox" id="examples"> Näita ka näidishaiglaid</label><button type="button" id="clear" class="link-button" hidden>Lähtesta filtrid</button></div>
+    </form>
+    <section class="overview" aria-labelledby="scope-title" hidden id="overview">
+      <div class="scope-intro"><p id="scope-place" class="eyebrow"></p><h2 id="scope-title"></h2><p id="scope-address"></p></div>
+      <dl id="metrics" class="metrics" aria-label="Teenuseotsingu andmete maht"></dl>
+      <div id="service-index" class="service-index" hidden></div>
+    </section>
+    <div class="workspace" id="workspace">
+      <aside id="contacts" aria-label="Haigla põhikontaktid" hidden></aside>
       <section class="results" aria-labelledby="result-heading">
-        <div class="result-top"><div><h2 id="result-heading">Suunamisvõimalused</h2><span id="count" class="count" role="status" aria-live="polite"></span></div><button type="button" id="clear" class="link-button" hidden>Tühjenda filtrid</button></div>
-        <p id="demo" class="demo-note" hidden><span class="note-dot"></span><span id="data-notice"></span></p>
-        <div class="list-head" aria-hidden="true"><span>Teenus ja variant</span><span>Haigla</span><span>Suunamisviis</span><span></span></div>
+        <div class="section-head"><h2 id="result-heading" tabindex="-1">Teenused ja suunamine</h2><span id="count" role="status" aria-live="polite"></span></div>
+        <div id="groups" class="groups" role="group" aria-label="Filtreeri teenusegrupi järgi"></div>
+        <p id="demo" class="demo-note" hidden></p>
         <div id="list"><p class="state">Laadin teenuseid…</p></div>
         <noscript><p>Otsingu kasutamiseks luba brauseris JavaScript.</p></noscript>
       </section>
@@ -37,5 +41,6 @@
   </main>
   <footer><div class="wrap foot-inner"><b>NOPE</b><span>Eesti Noored Perearstid</span><a href="https://nooredperearstid.ee/">NOPE koduleht</a></div></footer>
   <dialog id="detail" aria-labelledby="dialog-title"><div class="dialog-top"><span id="dialog-kicker" class="eyebrow"></span><button class="close" type="button" aria-label="Sulge">×</button></div><h2 id="dialog-title"></h2><div id="dialog-body"></div></dialog>
-  <script type="module" src="./app.js"></script>
-</body></html>
+  <script type="module" src="./app.js?v=haiglavaade1"></script>
+</body>
+</html>

@@ -16,6 +16,14 @@ export function validateCatalog(data) {
     }
   }
   for (const h of data.hospitals) {
+    for (const field of ["region","county","address"]) {
+      if (h[field] !== undefined && !textFields(h,[field])) throw Error("Kontrolli haigla andmeid: " + h.id);
+    }
+    if (h.contacts !== undefined) {
+      if (!Array.isArray(h.contacts) || !h.contacts.every(c => textFields(c,["label","phone"]) && /^\+[1-9]\d{6,14}$/.test(c.phone) && (!c.email || /^[^\s@?&#]+@[^\s@?&#]+\.[^\s@?&#]+$/.test(c.email)))) throw Error("Kontrolli haigla kontakte: " + h.id);
+      if (!Array.isArray(h.contactSources) || !h.contactSources.length || !h.contactSources.every(s => textFields(s,["label"]) && httpsLink(s.url))) throw Error("Haigla kontaktiallika link puudub: " + h.id);
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(h.contactsChecked) || !Number.isFinite(Date.parse(h.contactsChecked+"T00:00:00Z")) || new Date(h.contactsChecked+"T00:00:00Z").toISOString().slice(0,10)!==h.contactsChecked) throw Error("Kontrolli kontaktide kuupäeva: " + h.id);
+    }
     if (!textFields(h,["name","location"]) || (h.website !== null && !httpsLink(h.website))) throw Error("Kontrolli haiglat " + h.id);
   }
   for (const s of data.services) {
@@ -42,7 +50,7 @@ export function catalogRows(data) {
   const services = new Map(data.services.map(s=>[s.id,s]));
   return data.routes.map(route=>{
     const hospital=hospitals.get(route.hospitalId), service=services.get(route.serviceId);
-    const search=normalize([service.name, ...service.aliases, hospital.name, hospital.location, service.group, route.variant, route.referral, route.location].join(" "));
+    const search=normalize([service.name, ...service.aliases, hospital.name, hospital.location, hospital.region, hospital.county, service.group, route.variant, route.referral, route.location].join(" "));
     return {route,hospital,service,search};
   });
 }
