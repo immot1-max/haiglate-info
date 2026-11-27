@@ -1,0 +1,362 @@
+{
+  "mode": "mixed",
+  "feedbackEmail": "",
+  "hospitals": [
+    {
+      "id": "polva",
+      "name": "Põlva haigla",
+      "location": "Põlva",
+      "website": "https://www.polvahgl.ee/"
+    },
+    {
+      "id": "ranniku",
+      "name": "Ranniku n�idishaigla",
+      "location": "Ranniku n�idislinn",
+      "website": null
+    },
+    {
+      "id": "oru",
+      "name": "Oru n�idishaigla",
+      "location": "Oru n�idislinn",
+      "website": null
+    }
+  ],
+  "services": [
+    {
+      "id": "gastroskoopia",
+      "name": "Gastroskoopia",
+      "group": "Endoskoopia",
+      "aliases": [
+        "mao-uuring",
+        "maouuring",
+        "endoskoopia"
+      ]
+    },
+    {
+      "id": "ultraheli",
+      "name": "Kohuoone ultraheli",
+      "group": "Diagnostika",
+      "aliases": [
+        "UH",
+        "kohu ultraheli",
+        "sonograafia"
+      ]
+    },
+    {
+      "id": "taastusravi",
+      "name": "Taastusarsti vastuvott",
+      "group": "Taastusravi",
+      "aliases": [
+        "taastusravi",
+        "taastusarst"
+      ]
+    },
+    {
+      "id": "rontgen",
+      "name": "R�ntgenuuring",
+      "group": "Diagnostika",
+      "aliases": [
+        "RTG",
+        "r�ntgen"
+      ]
+    },
+    {
+      "id": "fusioteraapia",
+      "name": "F�sioteraapia",
+      "group": "Taastusravi",
+      "aliases": [
+        "f�sioterapeut",
+        "f�sioteraapia"
+      ]
+    },
+    {
+      "id": "koloskoopia",
+      "name": "Koloskoopia",
+      "group": "Endoskoopia",
+      "aliases": [
+        "kolonoskoopia",
+        "jämesooleuuring"
+      ]
+    },
+    {
+      "id": "vaagnapohi",
+      "name": "Vaagnapõhja füsioteraapia",
+      "group": "Taastusravi",
+      "aliases": [
+        "vaagnapõhi",
+        "füsioterapeut"
+      ]
+    },
+    {
+      "id": "logopeed",
+      "name": "Logopeedi vastuvõtt",
+      "group": "Taastusravi",
+      "aliases": [
+        "logopeedia",
+        "neelamishäire"
+      ]
+    },
+    {
+      "id": "psuhholoog",
+      "name": "Kliinilise psühholoogi vastuvõtt",
+      "group": "Vaimne tervis",
+      "aliases": [
+        "psühholoog",
+        "psühhoteraapia"
+      ]
+    },
+    {
+      "id": "stats-taastusravi",
+      "name": "Statsionaarne taastusravi",
+      "group": "Taastusravi",
+      "aliases": [
+        "haiglaravi",
+        "taastusravi"
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "id": "polva-gastroskoopia-tava",
+      "hospitalId": "polva",
+      "serviceId": "gastroskoopia",
+      "variant": "Anesteesiata",
+      "referral": "Saatekiri",
+      "location": "Kirurgiaosakond",
+      "conditions": "Tööversiooni järgi saab ambulatoorsele uuringule suunata saatekirjaga.",
+      "booking": "Tööversiooni järgi broneerib aja registratuur. Üldregistratuuri telefon on 799 9100.",
+      "source": "Põlva haigla kirurgiaosakond",
+      "sourceUrl": "https://www.polvahgl.ee/osakonnad/kirurgia-osakond/",
+      "checked": "2026-11-27",
+      "status": "working",
+      "sourceNote": "Suunamisviis ja broneerimise kord pärinevad haigla perearstide teenuseülevaate 2026. aasta novembri tööversioonist. Haigla veebilehel on kirjeldatud uuringu tegemise võimalust. Suunamiskorda saab täpsustada registratuurist."
+    },
+    {
+      "id": "polva-gastroskoopia-anesteesias",
+      "hospitalId": "polva",
+      "serviceId": "gastroskoopia",
+      "variant": "Anesteesias",
+      "referral": "E-konsultatsioon",
+      "location": "Kirurgiaosakond",
+      "conditions": "Tööversiooni järgi hindab endoskopist e-konsultatsioonil uuringu näidustust ja anesteesia vajadust.",
+      "booking": "Tööversiooni järgi korraldab haigla aja pärast e-konsultatsiooni ja juhendab patsienti ettevalmistusel.",
+      "source": "Põlva haigla kirurgiaosakond",
+      "sourceUrl": "https://www.polvahgl.ee/osakonnad/kirurgia-osakond/",
+      "checked": "2026-11-27",
+      "status": "working",
+      "sourceNote": "Suunamisviis ja broneerimise kord pärinevad haigla perearstide teenuseülevaate 2026. aasta novembri tööversioonist. Haigla veebilehel on kirjeldatud uuringu tegemise võimalust. Suunamiskorda saab täpsustada registratuurist."
+    },
+    {
+      "id": "polva-koloskoopia-tava",
+      "hospitalId": "polva",
+      "serviceId": "koloskoopia",
+      "variant": "Anesteesiata",
+      "referral": "Saatekiri",
+      "location": "Kirurgiaosakond",
+      "conditions": "Tööversiooni järgi saab ambulatoorsele uuringule suunata saatekirjaga.",
+      "booking": "Tööversiooni järgi broneerib aja registratuur. Üldregistratuuri telefon on 799 9100.",
+      "source": "Põlva haigla kirurgiaosakond",
+      "sourceUrl": "https://www.polvahgl.ee/osakonnad/kirurgia-osakond/",
+      "checked": "2026-11-27",
+      "status": "working",
+      "sourceNote": "Suunamisviis ja broneerimise kord pärinevad haigla perearstide teenuseülevaate 2026. aasta novembri tööversioonist. Haigla veebilehel on kirjeldatud uuringu tegemise võimalust. Suunamiskorda saab täpsustada registratuurist."
+    },
+    {
+      "id": "polva-koloskoopia-anesteesias",
+      "hospitalId": "polva",
+      "serviceId": "koloskoopia",
+      "variant": "Anesteesias",
+      "referral": "E-konsultatsioon",
+      "location": "Kirurgiaosakond",
+      "conditions": "Tööversiooni järgi hindab endoskopist e-konsultatsioonil uuringu näidustust ja anesteesia vajadust.",
+      "booking": "Tööversiooni järgi korraldab haigla aja pärast e-konsultatsiooni ja juhendab patsienti ettevalmistusel.",
+      "source": "Põlva haigla kirurgiaosakond",
+      "sourceUrl": "https://www.polvahgl.ee/osakonnad/kirurgia-osakond/",
+      "checked": "2026-11-27",
+      "status": "working",
+      "sourceNote": "Suunamisviis ja broneerimise kord pärinevad haigla perearstide teenuseülevaate 2026. aasta novembri tööversioonist. Haigla veebilehel on kirjeldatud uuringu tegemise võimalust. Suunamiskorda saab täpsustada registratuurist."
+    },
+    {
+      "id": "polva-vaagnapohi",
+      "hospitalId": "polva",
+      "serviceId": "vaagnapohi",
+      "variant": "Täiskasvanud naised",
+      "referral": "Saatekiri",
+      "location": "Ambulatoorne taastusravi",
+      "conditions": "Pere- või eriarsti saatekirjal iseseisvale füsioterapeudi vastuvõtule täpsusta vaagnapõhja füsioteraapia vajadus.",
+      "booking": "Broneeri taastusravi registratuuris telefonil 799 9184.",
+      "source": "Põlva haigla suunamisjuhis",
+      "sourceUrl": "https://www.polvahgl.ee/polva-haigla-avas-naistele-olulise-teenuse/",
+      "checked": "2026-11-27",
+      "status": "web"
+    },
+    {
+      "id": "polva-logopeed",
+      "hospitalId": "polva",
+      "serviceId": "logopeed",
+      "variant": "Lapsed ja täiskasvanud",
+      "referral": "Saatekiri",
+      "location": "Ambulatoorne taastusravi",
+      "conditions": "Tervisekassa rahastatud vastuvõtuks on vajalik arsti saatekiri. Teenus hõlmab ka neelamishäireid.",
+      "booking": "Broneeri taastusravi registratuuris telefonil 799 9184 või Terviseportaalis.",
+      "source": "Põlva haigla logopeedi vastuvõtt",
+      "sourceUrl": "https://www.polvahgl.ee/logopeedi_vastuvott/",
+      "checked": "2026-11-27",
+      "status": "web"
+    },
+    {
+      "id": "polva-psuhholoog",
+      "hospitalId": "polva",
+      "serviceId": "psuhholoog",
+      "variant": "Tervisekassa rahastatud vastuvõtt",
+      "referral": "Saatekiri",
+      "location": "Ambulatoorne vastuvõtt",
+      "conditions": "Kliinilise psühholoogi vastuvõtule saab perearsti saatekirjaga.",
+      "booking": "Aja saab broneerida telefonil 799 9184 või Terviseportaalis.",
+      "source": "Põlva haigla kliinilise psühholoogi vastuvõtt",
+      "sourceUrl": "https://www.polvahgl.ee/kliinilise_psuhholoogi_vastuvott/",
+      "checked": "2026-11-27",
+      "status": "web"
+    },
+    {
+      "id": "polva-stats-taastusravi",
+      "hospitalId": "polva",
+      "serviceId": "stats-taastusravi",
+      "variant": "Haiglaravi",
+      "referral": "Saatekiri",
+      "location": "Statsionaarne taastusravi",
+      "conditions": "Tervisekassa rahastatud ravile on vajalik arsti saatekiri. Haigla pakub statsionaarset taastusravi lastele ja täiskasvanutele.",
+      "booking": "Registreerimine telefonil 508 7897 tööpäeviti kell 8–12 või aadressil taastusravi@polvahgl.ee.",
+      "source": "Põlva haigla statsionaarne taastusravi",
+      "sourceUrl": "https://www.polvahgl.ee/statsionaarne_taastusravi/",
+      "checked": "2026-11-27",
+      "status": "web"
+    },
+    {
+      "id": "polva-uh",
+      "hospitalId": "polva",
+      "serviceId": "ultraheli",
+      "variant": "Kõhu- ja vaagnapiirkond · tasuline",
+      "referral": "Ilma saatekirjata",
+      "location": "Ultraheliuuring",
+      "conditions": "Haigla tasulisele ultraheliuuringule saab pöörduda otse.",
+      "booking": "Broneeri telefonil 5306 8572 tööpäeviti kell 8–14 või aadressil registratuur@polvahgl.ee.",
+      "source": "Põlva haigla ultraheliuuringud",
+      "sourceUrl": "https://www.polvahgl.ee/ultraheliuuring/",
+      "checked": "2026-11-27",
+      "status": "web"
+    },
+    {
+      "id": "ran-gas-1",
+      "hospitalId": "ranniku",
+      "serviceId": "gastroskoopia",
+      "variant": "Anesteesiata",
+      "referral": "Saatekiri",
+      "location": "Endoskoopiakabinet",
+      "conditions": "Plaaniline ambulatoorne uuring.",
+      "booking": "Aeg lepitakse kokku n�idishaigla registratuuris p�rast saatekirja koostamist.",
+      "source": "NOPE arendusn�ide",
+      "sourceUrl": null,
+      "checked": "2026-11-27",
+      "status": "demo"
+    },
+    {
+      "id": "ran-gas-2",
+      "hospitalId": "ranniku",
+      "serviceId": "gastroskoopia",
+      "variant": "Anesteesias",
+      "referral": "E-konsultatsioon",
+      "location": "Endoskoopiakabinet",
+      "conditions": "Suunamisel t�psusta, et soovitud uuring toimub anesteesias.",
+      "booking": "N�idishaigla endoskoopiameeskond annab p�rast e-konsultatsiooni vastust edasise juhise.",
+      "source": "NOPE arendusn�ide",
+      "sourceUrl": null,
+      "checked": "2026-11-27",
+      "status": "demo"
+    },
+    {
+      "id": "oru-gas-1",
+      "hospitalId": "oru",
+      "serviceId": "gastroskoopia",
+      "variant": "Anesteesiata",
+      "referral": "Saatekiri",
+      "location": "P�evaravikeskus",
+      "conditions": "Plaaniline ambulatoorne uuring.",
+      "booking": "Uuringuaeg broneeritakse n�idishaigla p�evaravikeskuse kaudu.",
+      "source": "NOPE arendusn�ide",
+      "sourceUrl": null,
+      "checked": "2026-11-27",
+      "status": "demo"
+    },
+    {
+      "id": "ran-uh-1",
+      "hospitalId": "ranniku",
+      "serviceId": "ultraheli",
+      "variant": "T�iskasvanu uuring",
+      "referral": "Saatekiri",
+      "location": "Radioloogiaosakond",
+      "conditions": "M�rgi saatekirjale soovitud uuring.",
+      "booking": "N�idishaigla registratuur lepib kokku uuringuaja.",
+      "source": "NOPE arendusn�ide",
+      "sourceUrl": null,
+      "checked": "2026-11-27",
+      "status": "demo"
+    },
+    {
+      "id": "oru-uh-1",
+      "hospitalId": "oru",
+      "serviceId": "ultraheli",
+      "variant": "T�iskasvanu uuring",
+      "referral": "Saatekiri",
+      "location": "Uuringukeskus",
+      "conditions": "M�rgi saatekirjale uuritav piirkond.",
+      "booking": "Broneerimine toimub n�idishaigla uuringukeskuse kaudu.",
+      "source": "NOPE arendusn�ide",
+      "sourceUrl": null,
+      "checked": "2026-11-27",
+      "status": "demo"
+    },
+    {
+      "id": "oru-taas-1",
+      "hospitalId": "oru",
+      "serviceId": "taastusravi",
+      "variant": "Esmane vastuvott",
+      "referral": "E-konsultatsioon",
+      "location": "Taastusravikeskus",
+      "conditions": "Sonasta konsultatsioonik�simus.",
+      "booking": "N�idishaigla annab vastuses edasise suunamisjuhise.",
+      "source": "NOPE arendusn�ide",
+      "sourceUrl": null,
+      "checked": "2026-11-27",
+      "status": "demo"
+    },
+    {
+      "id": "ran-rtg-1",
+      "hospitalId": "ranniku",
+      "serviceId": "rontgen",
+      "variant": "Plaaniline uuring",
+      "referral": "Saatekiri",
+      "location": "Radioloogiaosakond",
+      "conditions": "M�rgi saatekirjale uuritav piirkond.",
+      "booking": "Infos�steemi t��voo n�ites p��rdutakse saatekirjaga radioloogia registratuuri.",
+      "source": "NOPE arendusn�ide",
+      "sourceUrl": null,
+      "checked": "2026-11-27",
+      "status": "demo"
+    },
+    {
+      "id": "oru-fus-1",
+      "hospitalId": "oru",
+      "serviceId": "fusioteraapia",
+      "variant": "Ambulatoorne vastuvott",
+      "referral": "Saatekiri",
+      "location": "Taastusravikeskus",
+      "conditions": "Individuaalse vastuvotu n�ide.",
+      "booking": "P��rdumine registreeritakse n�idishaigla taastusravikeskuses.",
+      "source": "NOPE arendusn�ide",
+      "sourceUrl": null,
+      "checked": "2026-11-27",
+      "status": "demo"
+    }
+  ]
+}
